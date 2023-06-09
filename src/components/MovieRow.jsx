@@ -14,7 +14,7 @@ class MovieRow extends Component {
   getMovies = async () => {
     try {
       let response = await fetch(
-        "http://www.omdbapi.com/?apikey=3c39360a&s=" + this.props.query
+        "https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=3c39360a&s=" + this.props.query
       );
       if (response.ok) {
         let data = await response.json();
